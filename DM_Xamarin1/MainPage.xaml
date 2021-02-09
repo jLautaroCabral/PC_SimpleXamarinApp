@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="DM_Xamarin1.MainPage"> 
+    <!--
+    <Button Text="Cambiar color"
+                Clicked="OnClick" />
+    
+    <Label Text="Welcome to Xamarin.Forms!" 
+               x:Name="etiqueta"
+           HorizontalOptions="Center"
+           VerticalOptions="CenterAndExpand" />
+    -->
+    <Grid x:Name="grid" BackgroundColor="Black">
+        <Grid.Resources>
+        </Grid.Resources>
+        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*"></RowDefinition>
+            <RowDefinition Height="2*"></RowDefinition>
+            <RowDefinition Height="2*"></RowDefinition>
+            <RowDefinition Height="1*"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <Button Clicked="Limpiar" Text="Limpiar" Grid.Column="1" Grid.Row="3"/>
+    </Grid>
+
+</ContentPage>

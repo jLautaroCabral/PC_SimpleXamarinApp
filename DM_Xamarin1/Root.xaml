@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="DM_Xamarin1.Root"
+             xmlns:pages="clr-namespace:DM_Xamarin1"
+             xmlns:viewModels="clr-namespace:DM_Xamarin1.ViewModels;assembly=DM_Xamarin1">
+    <MasterDetailPage.BindingContext>
+        <viewModels:RootViewModel />
+    </MasterDetailPage.BindingContext>
+
+    <MasterDetailPage.Master>
+        <ContentPage Title="App Pomodoro">
+
+            <StackLayout>
+                <ListView ItemsSource="{Binding MenuItems}" SelectedItem="{Binding SelectedMenuItem, Mode=TwoWay}"/>
+                <Label Text="{Binding SelectedMenuItem, Mode=TwoWay}"></Label>
+            </StackLayout>
+            
+
+            
+        </ContentPage>
+    </MasterDetailPage.Master>
+
+    <MasterDetailPage.Detail>
+    <NavigationPage>
+      <x:Arguments>
+        <pages:RootDetail />
+      </x:Arguments>
+    </NavigationPage>
+  </MasterDetailPage.Detail>
+</MasterDetailPage>
